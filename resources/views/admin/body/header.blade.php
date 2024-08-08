@@ -213,12 +213,6 @@
                     </a>
                   </li>
                   <li class="py-2 dropdown-item">
-                    <a href="javascript:;" class="text-body ms-0">
-                      <i class="me-2 icon-md" data-feather="repeat"></i>
-                      <span>Switch User</span>
-                    </a>
-                  </li>
-                  <li class="py-2 dropdown-item">
                     <a href="{{route('admin.logout')}}" class="text-body ms-0">
                       <i class="me-2 icon-md" data-feather="log-out"></i>
                       <span>Log Out</span>
