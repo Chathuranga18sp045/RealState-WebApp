@@ -41,6 +41,7 @@
                                             <option value="smtp" {{ $permission->group_name == 'smtp' ? 'selected' : '' }}>SMTP Setting</option>
                                             <option value="site" {{ $permission->group_name == 'site' ? 'selected' : '' }}>Site Setting</option>
                                             <option value="role" {{ $permission->group_name == 'role' ? 'selected' : '' }}>Role & Permission</option>
+                                            <option value="admin" {{ $permission->group_name == 'admin' ? 'selected' : '' }}>Manage Admin</option>
                                         </select>
                                 </div>
 									                    <button type="submit" class="btn btn-primary me-2">Save Changes</button>

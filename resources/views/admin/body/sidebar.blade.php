@@ -131,8 +131,8 @@
             </div>
           </li>
 
+        @if(Auth::user()->can('rolepermission.menu'))
           <!--Roles and Permissions -->
-          
           <li class="nav-item nav-category">Role & Permission</li>
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#advancedUI" role="button" aria-expanded="false" aria-controls="advancedUI">
@@ -157,7 +157,9 @@
               </ul>
             </div>
           </li>
-        
+        @endif
+
+        @if(Auth::user()->can('adminuser.menu'))
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="collapse" href="#admin" role="button" aria-expanded="false" aria-controls="admin">
               <i class="link-icon" data-feather="user"></i>
@@ -175,7 +177,7 @@
               </ul>
             </div>
           </li>
-     
+        @endif
          
           
           <li class="nav-item nav-category">Docs</li>
