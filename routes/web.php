@@ -22,13 +22,9 @@ use function Laravel\Prompts\password;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+// Login Route
+Route::get('/',[AdminController::class,'AdminLogin'])->name('admin.login');
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::middleware('auth')->group(function () {
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
@@ -38,34 +34,8 @@ Route::middleware('auth')->group(function () {
 
 require __DIR__.'/auth.php';
 
-// // User Frontend All Route
-// Route::get('/',[UserController::class,'Index']);
-
-// Route::middleware(['auth'])->group(function(){
-//     Route::get('/user/profile', [UserController::class, 'UserProfile'])->name('user.profile');
-//     Route::POST('/user/profile/store', [UserController::class, 'UserProfileStore'])->name('user.profile.store');
-//     Route::get('/user/logout', [UserController::class, 'UserLogout'])->name('user.logout');
-//     Route::get('/user/change/password', [UserController::class, 'UserChangePassword'])->name('user.change.password');
-//     Route::get('/user/password/update', [UserController::class, 'UserPasswordUpdate'])->name('user.password.update');
-//     Route::get('/user/schedule/request', [UserController::class, 'UserscheduleRequest'])->name('user.schedule.request');
-//     // User WishlistAll Routes
-//     Route::Controller(WishlistController::class)->group(function(){
-//         Route::get('/user/wishlist', 'UserWishlist')->name('user.wishllist');
-//         Route::get('/get-wishlist-property', 'GetWishlistProperty');
-//         Route::get('/wishlist-remove{id}', 'wishlistRemove');
-//     });
-//     //User Compare All Routes
-//     Route::Controller(CompareController::class)->group(function(){
-//         Route::get('/user/compare', 'UserCompare')->name('user.compare');
-//         Route::get('/get-compare-property', 'GetCompareProperty');
-//         Route::get('/Compare-remove{id}', 'CompareRemove');
-//     });
-// });
-
-
 
 // Admin Group Middleware
-
 Route::middleware(['auth','roles:admin'])->group(function(){
     // Admin route
     Route::get('/admin/dashboard', [AdminController::class, 'AdminDashboard'])->name('admin.dashboard');
@@ -77,13 +47,6 @@ Route::middleware(['auth','roles:admin'])->group(function(){
 
 });
 
-
-Route::middleware(['auth','roles:agent'])->group(function(){
-// Agent route
-Route::get('/agent/dashboard', [AgentController::class, 'AgentDashboard'])->name('agent.dashboard');
-});
-
-Route::get('/admin/login',[AdminController::class,'AdminLogin'])->name('admin.login');
 
 
 // Admin Group Middleware
@@ -154,3 +117,34 @@ Route::middleware(['auth','roles:admin'])->group(function(){
     });
    
 }); //End Role Middleware
+
+// // User Frontend All Route
+// Route::get('/',[UserController::class,'Index']);
+
+// Route::middleware(['auth'])->group(function(){
+//     Route::get('/user/profile', [UserController::class, 'UserProfile'])->name('user.profile');
+//     Route::POST('/user/profile/store', [UserController::class, 'UserProfileStore'])->name('user.profile.store');
+//     Route::get('/user/logout', [UserController::class, 'UserLogout'])->name('user.logout');
+//     Route::get('/user/change/password', [UserController::class, 'UserChangePassword'])->name('user.change.password');
+//     Route::get('/user/password/update', [UserController::class, 'UserPasswordUpdate'])->name('user.password.update');
+//     Route::get('/user/schedule/request', [UserController::class, 'UserscheduleRequest'])->name('user.schedule.request');
+//     // User WishlistAll Routes
+//     Route::Controller(WishlistController::class)->group(function(){
+//         Route::get('/user/wishlist', 'UserWishlist')->name('user.wishllist');
+//         Route::get('/get-wishlist-property', 'GetWishlistProperty');
+//         Route::get('/wishlist-remove{id}', 'wishlistRemove');
+//     });
+//     //User Compare All Routes
+//     Route::Controller(CompareController::class)->group(function(){
+//         Route::get('/user/compare', 'UserCompare')->name('user.compare');
+//         Route::get('/get-compare-property', 'GetCompareProperty');
+//         Route::get('/Compare-remove{id}', 'CompareRemove');
+//     });
+// });
+
+// Agent All Routes
+Route::middleware(['auth','roles:agent'])->group(function(){
+    // Agent route
+    Route::get('/agent/dashboard', [AgentController::class, 'AgentDashboard'])->name('agent.dashboard');
+    });
+    

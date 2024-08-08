@@ -58,7 +58,7 @@
                 </div>
                 <div class="col-md-8 ps-md-0">
                   <div class="px-4 py-5 auth-form-wrapper">
-                    <a href="#" class="mb-2 noble-ui-logo logo-light d-block">Easy<span>Lerning</span></a>
+                    <a href="#" class="mb-2 noble-ui-logo logo-light d-block">NexSign<span>Global</span></a>
                     <h5 class="mb-4 text-muted fw-normal">Welcome back! Log in to your account.</h5>
                     <!-- Login User-->
                     <form class="forms-sample" method="POST" action="{{ route('login') }}">
