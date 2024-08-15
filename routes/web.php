@@ -23,7 +23,7 @@ use function Laravel\Prompts\password;
 */
 
 // Login Route
-Route::get('/',[AdminController::class,'AdminLogin'])->name('admin.login');
+Route::get('/user/login', [AdminController::class, 'AdminLogin'])->name('admin.login');
 
 
 Route::middleware('auth')->group(function () {
@@ -33,6 +33,10 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+////// User Frontend All Route \\\\\\\\\
+// Route::get('/user/dashboard', [UserController::class, 'UserDashboard'])->name('user.dashboard');
+Route::get('/', [UserController::class, 'UserDashboard'])->name('user.dashboard');
 
 
 // Admin Group Middleware
@@ -118,7 +122,8 @@ Route::middleware(['auth','roles:admin'])->group(function(){
    
 }); //End Role Middleware
 
-// // User Frontend All Route
+
+
 // Route::get('/',[UserController::class,'Index']);
 
 // Route::middleware(['auth'])->group(function(){

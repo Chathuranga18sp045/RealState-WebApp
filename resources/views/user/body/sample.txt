@@ -1,0 +1,33 @@
+<!-- Stylesheets
+<link href="{{ asset('frontend/assets/css/font-awesome-all.css') }}" rel="stylesheet">
+<link href="{{ asset('frontend/assets/css/flaticon.css') }}" rel="stylesheet">
+<link href="{{ asset('frontend/assets/css/owl.css') }}" rel="stylesheet">
+<link href="{{ asset('frontend/assets/css/bootstrap.css') }}" rel="stylesheet">
+<link href="{{ asset('frontend/assets/css/jquery.fancybox.min.css') }}" rel="stylesheet">
+<link href="{{ asset('frontend/assets/css/animate.css') }}" rel="stylesheet">
+<link href="{{ asset('frontend/assets/css/jquery-ui.css') }}" rel="stylesheet">
+<link href="{{ asset('frontend/assets/css/nice-select.css') }}" rel="stylesheet">
+<link href="{{ asset('frontend/assets/css/color/theme-color.css') }}" id="jssDefault" rel="stylesheet">
+<link href="{{ asset('frontend/assets/css/switcher-style.css') }}" rel="stylesheet">
+<link href="{{ asset('frontend/assets/css/style.css') }}" rel="stylesheet">
+<link href="{{ asset('frontend/assets/css/responsive.css') }}" rel="stylesheet"> -->
+
+
+
+<!-- core:js -->
+	<script src="{{ asset('backend/assets/vendors/core/core.js')}}"></script>
+	<!-- endinject -->
+
+	<!-- Plugin js for this page -->
+  <script src="{{ asset('backend/assets/vendors/flatpickr/flatpickr.min.js')}}"></script>
+  <script src="{{ asset('backend/assets/vendors/apexcharts/apexcharts.min.js')}}"></script>
+	<!-- End plugin js for this page -->
+
+	<!-- inject:js -->
+	<script src="{{ asset('backend/assets/vendors/feather-icons/feather.min.js')}}"></script>
+	<script src="{{ asset('backend/assets/js/template.js')}}"></script>
+	<!-- endinject -->
+
+	<!-- Custom js for this page -->
+  <script src="{{ asset('backend/assets/js/dashboard-dark.js')}}"></script>
+	<!-- End custom js for this page -->

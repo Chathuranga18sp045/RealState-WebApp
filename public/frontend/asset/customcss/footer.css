@@ -1,0 +1,97 @@
+/* footer-styles.css */
+
+/* General footer styles */
+.main-footer {
+    background-color: #333; /* Dark gray background for the footer */
+    color: #fff; /* White text color for contrast */
+    padding: 2rem 0; /* Padding around the footer */
+    margin-top: 2rem; /* Margin on top to separate from body content */
+}
+
+/* General body styles */
+body {
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+
+/* Main content area styles */
+.main-content {
+    padding-bottom: 2rem; /* Add padding at the bottom of the main content area */
+}
+
+/* Footer top section styles */
+.footer-top {
+    padding: 2rem 0; /* Padding around the top section */
+}
+
+.footer-top .footer-widget {
+    margin-bottom: 1.5rem; /* Space between footer widgets */
+}
+
+/* Widget title styles */
+.footer-widget .widget-title h3 {
+    color: #fff; /* White text for widget titles */
+    border-bottom: 2px solid #007bff; /* Blue underline for widget titles */
+    padding-bottom: 0.5rem; /* Padding below widget titles */
+    margin-bottom: 1rem; /* Space below widget titles */
+}
+
+/* Text and link styles */
+.footer-widget .text p,
+.footer-widget .links-list a,
+.footer-widget .info-list a {
+    color: #ddd; /* Light gray text color */
+}
+
+.footer-widget .links-list a:hover,
+.footer-widget .info-list a:hover {
+    color: #007bff; /* Blue color on hover */
+}
+
+/* Post widget styles */
+.footer-widget .post {
+    margin-bottom: 1rem; /* Space between posts */
+}
+
+.footer-widget .post h5 {
+    margin: 0; /* Remove margin from post titles */
+}
+
+.footer-widget .post p {
+    color: #bbb; /* Light gray color for post dates */
+}
+
+/* Footer bottom section styles */
+.footer-bottom {
+    border-top: 1px solid #444; /* Slightly lighter gray border on top */
+    padding: 1rem 0; /* Padding around the bottom section */
+}
+
+.footer-bottom .footer-logo img {
+    max-height: 50px; /* Limit height of the logo */
+}
+
+.footer-bottom .copyright p {
+    margin: 0; /* Remove margin from copyright text */
+}
+
+.footer-bottom .footer-nav a {
+    color: #ddd; /* Light gray color for footer navigation links */
+    margin-left: 1rem; /* Space between navigation links */
+}
+
+.footer-bottom .footer-nav a:hover {
+    color: #007bff; /* Blue color on hover */
+}
+
+/* Media queries for responsive design */
+@media (max-width: 768px) {
+    .footer-bottom .footer-nav {
+        text-align: center; /* Center-align footer navigation on smaller screens */
+    }
+
+    .footer-bottom .footer-nav li {
+        display: inline-block; /* Display navigation links inline */
+        margin: 0 0.5rem; /* Space between navigation links */
+    }
+}

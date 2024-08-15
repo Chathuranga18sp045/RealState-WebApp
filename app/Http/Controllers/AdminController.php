@@ -24,7 +24,7 @@ class AdminController extends Controller
 
         $request->session()->regenerateToken();
 
-        return redirect('/');
+        return redirect('/user/login');
     }// }End Method
 
     public function AdminLogin(){

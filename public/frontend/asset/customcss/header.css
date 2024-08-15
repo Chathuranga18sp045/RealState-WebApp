@@ -1,0 +1,16 @@
+/* Styles for making the header sticky */
+.header-top {
+    position: fixed; /* Fix the position */
+    top: 0; /* Stick to the top of the viewport */
+    left: 0; /* Align with the left edge */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it's above other elements */
+    background-color: #f8f9fa; /* Background color to match the header */
+    border-bottom: 1px solid #e5e5e5; /* Optional: Add a bottom border for separation */
+    margin-bottom: 0; /* Reset margin-bottom */
+}
+
+/* Add padding to the content below to prevent overlap */
+body {
+    padding-top: 60px; /* Adjust based on the height of the header */
+}

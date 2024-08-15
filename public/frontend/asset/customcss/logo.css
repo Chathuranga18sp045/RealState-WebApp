@@ -1,0 +1,67 @@
+/* Custom Preloader Styles */
+.loader-wrap {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1050; /* Ensures it's on top of other elements */
+}
+
+.preloader {
+    text-align: center;
+}
+
+.spinner {
+    width: 3rem;
+    height: 3rem;
+    border-width: 0.5em;
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+.preloader-close {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    cursor: pointer;
+}
+
+.preloader-close i {
+    font-size: 1.5rem;
+    color: #000;
+}
+
+.txt-loading {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.letters-loading {
+    animation: fadeInOut 1s ease-in-out infinite;
+}
+
+@keyframes fadeInOut {
+    0%, 100% { opacity: 0; }
+    50% { opacity: 1; }
+}
+
+/* Ensure that the "EASYLAND" text is styled properly */
+.easyland-text {
+    font-size: 1.5rem; /* Adjust size as needed */
+    font-weight: bold;
+    color: #000; /* Adjust color as needed */
+    display: none; /* Initially hidden */
+}

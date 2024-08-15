@@ -1,0 +1,7 @@
+.fullwidth-image {
+    width: 100%;
+    height: 300px; /* or use 50vh for viewport height */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

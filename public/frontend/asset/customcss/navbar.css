@@ -1,0 +1,115 @@
+/* Base styles for navbar text */
+.navbar-nav .nav-link {
+    font-weight: bold; /* Make text bold */
+    color: #444; /* Lighter black color */
+    font-size: 1.2rem; /* Increase font size */
+    transition: color 0.3s ease, transform 0.3s ease; /* Smooth color transition and animation */
+    margin: 0 1.5rem; /* Increase space between items */
+}
+
+/* Text color on hover with unique animation */
+.navbar-nav .nav-link:hover {
+    color: #007bff; /* Text color on hover */
+    transform: translateY(-3px) scale(1.1); /* Slight lift and zoom effect on hover */
+}
+
+/* Dropdown menu styles */
+.navbar-nav .dropdown-menu {
+    border-radius: 0.25rem; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* More pronounced shadow */
+    padding: 0; /* Remove default padding */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth opacity and transform transition */
+    transform: translateY(10px); /* Dropdown starts below */
+    visibility: hidden; /* Hide dropdown initially */
+    position: absolute; /* Ensure proper positioning */
+    z-index: 1000; /* Ensure dropdown is on top */
+}
+
+/* Show dropdown menu on hover */
+.navbar-nav .dropdown:hover .dropdown-menu {
+    opacity: 1; /* Show dropdown */
+    visibility: visible; /* Make it visible */
+    transform: translateY(0); /* Move to normal position */
+}
+
+/* Dropdown item color and hover effect */
+.navbar-nav .dropdown-menu .dropdown-item {
+    font-weight: bold; /* Bold text in dropdown */
+    color: #444; /* Lighter black color */
+    font-size: 1.1rem; /* Slightly larger font size */
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth color transition */
+    padding: 0.75rem 1rem; /* Padding for dropdown items */
+}
+
+/* Dropdown item hover effect */
+.navbar-nav .dropdown-menu .dropdown-item:hover {
+    color: #fff; /* Text color on hover */
+    background-color: #007bff; /* Background color on hover */
+}
+
+/* Dropdown submenu styles */
+.dropdown-submenu {
+    position: relative; /* Relative positioning for nested dropdowns */
+}
+
+.dropdown-submenu .dropdown-menu {
+    top: 0; /* Align to top of parent */
+    left: 100%; /* Position to the right of parent */
+    margin-left: 0.1rem; /* Small margin for spacing */
+    border-radius: 0.25rem; /* Rounded corners */
+    display: none; /* Hide submenu by default */
+    opacity: 0; /* Initially hidden */
+    visibility: hidden; /* Initially hidden */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth opacity and transform transition */
+    transform: translateY(10px); /* Submenu starts below */
+}
+
+/* Show submenu on hover */
+.dropdown-submenu:hover .dropdown-menu {
+    display: block; /* Show submenu */
+    opacity: 1; /* Ensure submenu is visible */
+    visibility: visible; /* Ensure submenu is visible */
+    transform: translateY(0); /* Move to normal position */
+}
+
+/* Hide submenu on click */
+.dropdown-submenu .dropdown-toggle:focus + .dropdown-menu {
+    display: block; /* Show submenu when focused */
+}
+
+/* Megamenu styling */
+.megamenu {
+    width: 100%; /* Full width */
+    padding: 1rem; /* Padding around content */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow */
+    visibility: hidden; /* Hide megamenu initially */
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.4s ease, transform 0.4s ease; /* Smooth opacity and transform transition */
+    transform: translateY(10px); /* Megamenu starts below */
+}
+
+/* Show megamenu on hover */
+.navbar-nav .dropdown:hover .megamenu {
+    opacity: 1; /* Show megamenu */
+    visibility: visible; /* Make it visible */
+    transform: translateY(0); /* Move to normal position */
+}
+
+.megamenu .row {
+    margin: 0; /* Remove default margin */
+}
+
+.megamenu .col-xl-4 {
+    padding: 0.5rem; /* Padding inside columns */
+}
+
+.megamenu h4 {
+    font-weight: bold; /* Bold headings */
+    color: #444; /* Heading color */
+    margin-bottom: 0.5rem; /* Space below headings */
+}
+.navbar {
+    margin-bottom: 15px; 
+    margin-top: 70px;
+}
