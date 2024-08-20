@@ -1,0 +1,293 @@
+/* Container for the background image and content */
+.background-container {
+    width: 100%;
+    height: 400px;
+    background-size: cover;
+    background-position: center;
+    position: relative; /* Position content inside it */
+    display: flex;
+    flex-direction: column; /* Stack child elements vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    overflow: hidden; /* Hide overflow to manage scrolling manually */
+}
+
+/* Styling for header text */
+.custom-header {
+    color: white; /* Ensures text is white */
+    font-size: 3.5rem; /* Increase font size */
+    font-weight: 600; /* Make the font more bold */
+    text-align: center; /* Center the text horizontally */
+    padding-top: 30px; /* Adjust top padding as needed */
+    margin: 0; /* Remove default margins */
+}
+
+/* Styling for paragraph text */
+.custom-paragraph {
+    color: white; /* Ensures text is white */
+    font-size: 1.25rem; /* Increase font size for paragraph */
+    font-weight: 600; /* Normal font weight for the paragraph */
+    text-align: center; /* Center the text horizontally */
+    margin: 0 auto; /* Center align with margin auto (centering block element) */
+    max-width: 800px; /* Optional: Set a maximum width for readability */
+}
+
+/* CSS for the search bar */
+body {
+    font-family: Arial, sans-serif;
+}
+
+/* Container for toggle buttons and content */
+.toggle-buttons {
+    display: flex;
+    margin-top: 10px; /* Margin to separate from other elements */
+    border: 1px solid #ddd; /* Border around the buttons */
+    border-radius: 5px; /* Rounded corners */
+    overflow: hidden; /* Ensure no content overflow */
+}
+
+/* Individual toggle button styling */
+.toggle-btn {
+    background-color: #f0f0f0; /* Default background color */
+    border: none; /* Remove default border */
+    border-right: 1px solid #ddd; /* Border between buttons */
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    flex: 1; /* Equal width for buttons */
+    text-align: center; /* Center text */
+}
+
+.toggle-btn:last-child {
+    border-right: none; /* Remove border from the last button */
+}
+
+.toggle-btn.active {
+    background-color: #007bff; /* Active button background color */
+    color: #fff; /* Active button text color */
+}
+
+.toggle-btn:hover {
+    background-color: #e0e0e0; /* Background color on hover */
+}
+
+/* Container for content section */
+.toggle-content {
+    max-height: 60vh; /* Max height to limit the content container */
+    overflow-y: auto; /* Vertical scrollbar when content overflows */
+    border: 1px solid #ddd; /* Border around content */
+    border-radius: 5px; /* Rounded corners */
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
+    padding: 15px; /* Padding inside the container */
+    width: 80%; /* Ensure it stretches to the full width of the parent */
+    box-sizing: border-box; /* Include padding in width calculation */
+    display: flex; /* Flexbox for content layout */
+    flex-direction: column; /* Stack children vertically */
+}
+
+/* Individual content section styling */
+.content-section {
+    padding: 10px; /* Padding inside each section */
+}
+
+/* Utility class to hide elements */
+.hidden {
+    display: none; /* Hide elements */
+}
+
+/* Custom styles for form centering */
+.form-label {
+    text-align: center; /* Center text alignment */
+}
+
+.form-control, .form-select {
+    display: block; /* Block display for form controls */
+    margin: 0 auto; /* Center form controls horizontally */
+    max-width: 100%; /* Ensure form controls fit within container */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+/* Style for the button container */
+.btn-container {
+    background-color: #28a745; /* Green background */
+    color: #fff; /* White text */
+    padding: 10px; /* Padding around text */
+    border-radius: 5px; /* Rounded corners */
+    text-align: center; /* Center text horizontally */
+    cursor: pointer; /* Pointer cursor on hover */
+    width: 200%; /* Full width of the parent container */
+    max-width: 200px; /* Limit button width */
+    display: flex; /* Flexbox for centering text */
+    justify-content: center; /* Center text horizontally */
+    align-items: center; /* Center text vertically */
+    margin-top: 20px; /* Margin above button */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Style for the button text */
+.btn-text {
+    font-size: 1rem; /* Font size */
+    font-weight: 600; /* Font weight */
+}
+
+/* Change background color on hover */
+.btn-container:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .toggle-content {
+        padding: 10px; /* Adjust padding on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .background-container {
+        height: 100vh;
+    }
+    .toggle-buttons {
+        flex-direction: row; /* Stack buttons vertically on small screens */
+       
+
+    }
+    
+    .toggle-btn {
+        border-right: none; /* Remove borders for stacked buttons */
+        border-bottom: 1px solid #ddd; /* Add bottom border */
+    }
+
+    .toggle-btn:last-child {
+        border-bottom: none; /* Remove bottom border from the last button */
+    }
+
+    .btn-container {
+        max-width: 100%; /* Full width on small screens */
+    }
+}
+
+
+.second-section {
+    padding: 20px; /* Optional: Padding inside the section */
+    box-sizing: border-box; /* Include padding in the total width and height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 100vh; /* Limit the height to the viewport height */
+}
+
+/* Ensure the card container fits within the second-section and allows scrolling */
+.card-container {
+    display: flex; /* Flexbox for alignment */
+    flex-wrap: wrap; /* Allow cards to wrap to the next line */
+    gap: 30px; /* Space between cards */
+    justify-content: center; /* Center the cards horizontally */
+    padding: 10px; /* Padding around the card container */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
+    max-height: 100%; /* Ensure the container doesn’t exceed the height of its parent */
+}
+
+/* Styling for the card */
+.card {
+    margin-top: 50px;
+    border: none; /* Remove the border */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4); /* Add a more pronounced shadow */
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden; /* Ensure rounded corners affect the image as well */
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Stack children vertically */
+    align-items: center; /* Center children horizontally */
+    justify-content: center; /* Center children vertically */
+    width: 100%; /* Full width of its container */
+    max-width: 10rem; /* Set a maximum width for the card */
+    max-height: 15rem;
+    box-sizing: border-box;
+}
+
+/* Center the image inside the card */
+.card-img-top {
+    display: block; /* Ensure it behaves as a block element */
+    width: 100%; /* Full width of the card */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 80px; /* Optional: Set a max-width for better control */
+    max-height: 80px; /* Optional: Set a max-height for better control */
+    object-fit: cover; /* Ensure image covers the area */
+    margin-bottom: 1rem; /* Space between image and card body */
+}
+
+/* Optional: Style for the card body */
+.card-body {
+    text-align: center; /* Center text horizontally */
+}
+
+.card-title {
+    font-weight: bold; /* Bold card title */
+}
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+    .card-container {
+        padding: 10px; /* Adjust padding on smaller screens */
+    }
+}
+
+@media (max-width: 992px) {
+    .card-container {
+        gap: 20px; /* Reduce gap on smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .card-container {
+        gap: 15px; /* Reduce gap on mobile screens */
+    }
+    .card {
+        max-width: 100%; /* Make card full width on very small screens */
+    }
+}
+
+@media (max-width: 576px) {
+    .card-container {
+        gap: 5px; /* Minimize gap on very small screens */
+    }
+    .card {
+        max-width: 100%; /* Ensure cards take full width of container */
+    }
+}
+ /* All Categories Button */
+.all-categories{
+    align-items: center;
+}
+
+.all-categories {
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+    align-items: center; /* Center the button vertically */
+    margin-top: 50px;
+}
+/* Center the button container */
+.all-categories {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100%; /* Ensure full height for vertical centering */
+}
+
+/* Style for the button */
+.btn-category {
+    font-size: 1.25rem; /* Increase font size */
+    font-weight: bold; /* Make text bold */
+    padding: 15px 30px; /* Increase padding for size */
+    border-radius: 5px; /* Rounded corners */
+    border: 2px solid rgba(0, 255, 0, 0.6); /* RGB border color */
+    background-color: #28a745; /* Button background color */
+    color: #fff; /* Button text color */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+}
+
+/* Add hover effect */
+.btn-category:hover {
+    background-color: #218838; /* Slightly darker background color */
+    transform: scale(1.05); /* Slightly increase size on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Shadow on hover */
+}
+

@@ -5,7 +5,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <!-- Left Column -->
-                <div class="col-12 col-md-6 d-flex align-items-center">
+                <div class="col-12 col-md-9 d-flex align-items-center">
                     <ul class="flex-wrap mb-0 list-unstyled d-flex me-md-4">
                         <li class="mb-2 d-flex align-items-center me-3 mb-md-0">
                             <i class="fas fa-map-marker-alt me-2"></i> No.123, 5th Channel, Anuradhapura
@@ -20,7 +20,7 @@
                     </ul>
                 </div>
                 <!-- Right Column -->
-                <div class="col-12 col-md-6 d-flex justify-content-end align-items-center">
+                <div class="col-12 col-md-3 d-flex justify-content-end align-items-center">
                     <ul class="flex-wrap mb-0 list-unstyled d-flex me-md-4">
                         <li class="me-2"><a href="index.html" class="text-decoration-none"><i class="fab fa-facebook-f"></i></a></li>
                         <li class="me-2"><a href="index.html" class="text-decoration-none"><i class="fab fa-twitter"></i></a></li>

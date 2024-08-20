@@ -15,7 +15,7 @@
 
                   <h6 class="card-title">Add Property Type</h6>
 
-                  <form method="POST" action="{{route('store.type')}}" class="forms-sample">
+                  <form method="POST" action="{{route('store.type')}}" class="forms-sample" enctype="multipart/form-data">
                                         @csrf
                 
                     <div class="mb-3">
@@ -24,14 +24,14 @@
                                           @error('type_name')
                                           <span class="text-danger">{{$message}}</span>
                                           @enderror
-                      </div>
-                                      <div class="mb-3">
+                    </div>
+                    <div class="mb-3">
                                       <label for="exampleInputEmail" class="from-label">Type Icon</label>
-                      <input type="text" name="type_icon" class="form-control @error('type_icon') is-invalid @enderror ">
+                      <input type="file" name="type_icon" class="form-control @error('type_icon') is-invalid @enderror ">
                                           @error('type_icon')
                                           <span class="text-danger">{{$message}}</span>
                                           @enderror
-                      </div>
+                    </div>
                   
                     <button type="submit" class="btn btn-primary me-2">Save Changes</button>
 

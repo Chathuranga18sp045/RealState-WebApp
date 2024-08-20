@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RealState</title>
+    
 <!-- Fav Icon -->
 <link rel="icon" href="{{ asset('frontend/assets/images/favicon.ico') }}" type="image/x-icon">
 
@@ -21,6 +22,8 @@
 <link href="{{ asset('frontend/asset/customcss/header.css') }}" rel="stylesheet">
 <link href="{{ asset('frontend/asset/customcss/navbar.css') }}" rel="stylesheet">
 <link href="{{ asset('frontend/asset/customcss/footer.css') }}" rel="stylesheet">
+<link href="{{ asset('frontend/asset/customcss/firstimage.css') }}" rel="stylesheet">
+
 
 
 </head>
@@ -76,6 +79,7 @@
 <script src="{{ asset('frontend/asset/customjs/logo.js') }}"></script>
 <script src="{{ asset('frontend/asset/customjs/navbar.js') }}"></script>
 <script src="{{ asset('frontend/asset/customjs/footer.js') }}"></script>
+<script src="{{ asset('frontend/asset/customjs/firstimage.js') }}"></script>
 
  
 <!-- Boostrap JS -->
